@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas - Materialize</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script src="assets/funciones.js" defer></script>
+</head>
+<body class="indigo lighten-4">
+    <nav class="indigo">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo valign-wrapper">
+                <img src="assets/img/sale.svg" alt="Logo" style="height: 30px; margin-right: 10px;">
+                <i>Lo quieres, te lo vendo</i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container section" style="padding-bottom: 120px;">
+        <h4><i>Estadísticas de Ventas</i></h4>
+        <div class="card white p-4" style="padding: 20px;">
+            <table id="statsTable" class="striped responsive-table w-100">
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre Producto</th>
+                        <th>Categoría</th>
+                        <th>Unidades Vendidas</th>
+                        <th>Ingresos Totales (CLP)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>P001</td><td>Consola Videojuegos</td><td>Juguetes y Consolas</td><td>120</td><td>CLP $36.000.000</td></tr>
+                    <tr><td>P002</td><td>Chaqueta de Cuero</td><td>Ropa</td><td>85</td><td>CLP $4.250.000</td></tr>
+                    <tr><td>P003</td><td>Juego de Ollas</td><td>Cocina</td><td>45</td><td>CLP $1.800.000</td></tr>
+                    <tr><td>P004</td><td>Sofá 3 Cuerpos</td><td>Muebles</td><td>15</td><td>CLP $4.500.000</td></tr>
+                    <tr><td>P005</td><td>Peluche Gigante</td><td>Juguetes y Consolas</td><td>200</td><td>CLP $3.000.000</td></tr>
+                    <tr><td>P006</td><td>Air Fryer 5L</td><td>Cocina</td><td>110</td><td>CLP $7.700.000</td></tr>
+                    <tr><td>P007</td><td>Polera Algodón</td><td>Ropa</td><td>310</td><td>CLP $3.100.000</td></tr>
+                    <tr><td>P008</td><td>Mesa de Centro</td><td>Muebles</td><td>28</td><td>CLP $1.960.000</td></tr>
+                    <tr><td>P009</td><td>Mando Inalámbrico</td><td>Juguetes y Consolas</td><td>140</td><td>CLP $7.000.000</td></tr>
+                    <tr><td>P010</td><td>Batidora de Mano</td><td>Cocina</td><td>65</td><td>CLP $1.625.000</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="page-footer indigo" style="position: fixed; bottom: 0; width: 100%; padding-top: 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <span>Somos "Lo Quieres, te lo vendo" - 2026</span>
+            <a class="grey-text text-lighten-4" href="contacto.html"><i>Contactanos!</i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#statsTable').DataTable({
+                "language": { "url": "https://cdn.datatables.net/plug-ins/2.0.8/i18n/es-ES.json" }
+            });
+        });
+    </script>
+</body>
+</html>

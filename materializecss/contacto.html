@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Materialize</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="assets/funciones.js" defer></script>
+</head>
+<body class="indigo lighten-4">
+    <nav class="indigo">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo valign-wrapper">
+                <img src="assets/img/sale.svg" alt="Logo" style="height: 30px; margin-right: 10px;">
+                <i>Lo quieres, te lo vendo</i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container section d-flex justify-content-center" style="display: flex; justify-content: center;">
+        <div class="card indigo p-4 white-text" style="padding: 20px; width: 100%; max-width: 500px;">
+            <div class="input-field">
+                <input id="nameInput" type="text" class="white-text" onfocus="resetError(this)" oninput="allowOnly(this, 'alpha', 20)">
+                <label for="nameInput" class="white-text">Nombre</label>
+            </div>
+            <div class="input-field">
+                <input id="phoneInput" type="text" class="white-text" onfocus="resetError(this)" oninput="allowOnly(this, 'num', 9)">
+                <label for="phoneInput" class="white-text">Teléfono</label>
+            </div>
+            <div class="input-field">
+                <input id="emailInput" type="text" class="white-text" onfocus="resetError(this)" oninput="allowOnly(this, 'email')">
+                <label for="emailInput" class="white-text">E-Mail</label>
+            </div>
+            <button class="btn waves-effect waves-light blue darken-4 width-100" style="width: 100%;" onclick="onFormComplete()">Enviar</button>
+        </div>
+    </main>
+
+    <footer class="page-footer indigo" style="position: fixed; bottom: 0; width: 100%; padding-top: 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <span>Somos "Lo Quieres, te lo vendo" - 2026</span>
+            <a class="grey-text text-lighten-4" href="contacto.html"><i>Contactanos!</i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

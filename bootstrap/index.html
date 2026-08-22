@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Quieres, Te Lo Vendo - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/funciones.js" defer></script>
+</head>
+<body class="bg-light pb-5">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/sale.svg" alt="Logo" width="40" height="32" class="d-inline-block align-text-top me-2">
+                <i>Lo quieres, te lo vendo</i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <h2><i>Productos</i></h2>
+        <div class="d-flex overflow-auto gap-3 p-3 bg-secondary rounded mb-4">
+            <div class="bg-primary text-white p-5 rounded flex-shrink-0" style="width: 200px; height: 200px;"></div>
+            <div class="bg-primary text-white p-5 rounded flex-shrink-0" style="width: 200px; height: 200px;"></div>
+            <div class="bg-primary text-white p-5 rounded flex-shrink-0" style="width: 200px; height: 200px;"></div>
+            <div class="bg-primary text-white p-5 rounded flex-shrink-0" style="width: 200px; height: 200px;"></div>
+            <div class="bg-primary text-white p-5 rounded flex-shrink-0" style="width: 200px; height: 200px;"></div>
+        </div>
+
+        <h2><i>Sobre nosotros</i></h2>
+        <p class="fs-6">
+            Somos un grupo de Jovenes que se dedican a encontrar los mejores productos para ti, y ofrecerlos a un precio irresistible.
+            ¡Vendemos de todo! Ropa, articulos de cocina, muebles, juguetes, consolas ¡y más! Encuentranos en: 
+            <a href="https://whereiswaldo.com/level1.html">Avenida Avenoide Calle Esaladeahi 392</a>
+        </p>
+
+        <button class="btn btn-primary rounded-pill mt-3" onclick="goto('estadisticas.html')">Estadisticas</button>
+    </main>
+
+    <footer class="bg-primary text-white fixed-bottom p-2 d-flex justify-content-between align-items-center">
+        <p class="m-0 ms-2">Somos "Lo Quieres, te lo vendo" - 2026</p>
+        <a href="contacto.html" class="text-white me-2"><i>Contactanos!</i></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
