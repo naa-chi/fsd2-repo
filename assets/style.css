@@ -5,10 +5,11 @@
   height: 13%;
   min-height: 50px;
   background-color: #6368fe;
-
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-
+  position: relative;
+  min-width: max-content;
 }
 .topbar img {
   height: 80%;
@@ -51,7 +52,7 @@ ul {
 }
 
 main {
-  padding-bottom: 10%;
+  padding-bottom: 15vh;
 }
 footer {
   position: fixed;
@@ -84,51 +85,76 @@ footer a {
   font-size: 2vh;
 }
 
-body{
+
+html, body{
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: #c1bcff;
 }
 
-.contact {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.centered-main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 2vh;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+
   align-items: center;
   background-color: #5953ff;
   width: 70vh;
   border-radius: 5%;
   padding: 10px 0px;
-  gap: 10px;
+  gap: 10px 0px;
   flex-direction: column;
-  transform: translate(-50%, -50%);
 }
 
 .contact div {
   width: 85%;
   background-color: #716cff;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px 10px;
-
-  flex-direction: column;
-  
+  padding: 5% 3%;
+  gap: 0px;
 }
 .contact div p {
   color: white;
   font-family: Arial;
   font-size: 100%;
+  margin: 0px;
+}
+
+.contact div b {
+  color: rgb(159, 0, 0);
+  font-family: Arial;
+  justify-content: flex-end;
 }
 
 .contact div input {
   font-family: Arial;
   font-size: 100%;
   padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  color: white;
 }
 
-.contact button {
+.contact div input.error {
+  color: rgb(157, 6, 6);
+  border-bottom: 2px solid #3e0303;
+}
+
+.contact div input.error::placeholder {
+  color: rgb(157, 6, 6);
+}
+
+button {
   color: white;
   background-color: #2930ff;
   font-family: Arial;
@@ -137,10 +163,8 @@ body{
   width: 30vh;
   height: 5vh;
   border-radius: 20px;
-
-  
 }
 
-.contact button:hover {
+button:hover {
   background-color: #1b1fa1;
 }

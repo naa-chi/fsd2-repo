@@ -3,8 +3,9 @@
     <head>
         <title>Lo quieres, te contacto</title>
         <meta charset="UTF-8">
-         <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/funciones.js" defer></script>
     </head>
 
     <body>
@@ -15,29 +16,40 @@
             </div>
         </header>
 
-        <main>
+        <main class="centered-main">
             <div class="contact">
                 <div>
                     <p>Nombre:</p>
-                    <input type="text">
+                    <input 
+                    type="text" 
+                    id="nameInput" 
+                    onfocus="resetError(this)"
+                    oninput="allowOnly(this, 'alpha', 20)"
+                    >
                 </div>
                 
                 <div>
                     <p>Teléfono:</p>
-                    <input type="text">
+                    <input 
+                    type="text" 
+                    id="phoneInput" 
+                    onfocus="resetError(this)"
+                    oninput="allowOnly(this, 'num', 9)"
+                    >
                 </div>
                 <div>
                     <p>E-Mail:</p>
-                    <input type="text">
+                    <input 
+                    type="text" 
+                    id="emailInput" 
+                    onfocus="resetError(this)"
+                    oninput="allowOnly(this, 'email')"
+                    >
                 </div>
-
-                <a href="index.html">
-                    <button>
-                        Enviar
-                    </button>
-                </a>
+                <button onclick="onFormComplete()">
+                    Enviar
+                </button>
             </div>
-
         </main>
 
         <footer>
